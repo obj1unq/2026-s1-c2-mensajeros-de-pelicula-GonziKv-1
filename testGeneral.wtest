@@ -4,23 +4,23 @@ import destinos.*
 describe "puede ser entregado el paquete"{
     test "test 1"{
         matrix.establecerPago(false)
-        assert.equals (false, matrix.puedePasar(neo))
+        assert.notThat (matrix.puedePasar(neo))
     }
     test "test2"{
         matrix.establecerPago(true)
-        assert.equals (true, matrix.puedePasar(jeanGray))
+        assert.that (matrix.puedePasar(jeanGray))
     }
     test "test3"{
         brooklynBridge.establecerPago(true)
         saraConnor.setPeso(70)
         saraConnor.setAcoplados(1)
         saraConnor.transporte("camion")
-        assert.equals(false, brooklynBridge.puedePasar(saraConnor))
+        assert.notThat(brooklynBridge.puedePasar(saraConnor))
     }
     test "test 4"{
         brooklynBridge.establecerPago(true)
         saraConnor.setPeso(70)
         saraConnor.transporte("moto")
-        assert.equals(true, brooklynBridge.puedePasar(saraConnor))
+        assert.that(brooklynBridge.puedePasar(saraConnor))
     }
 }
