@@ -1,0 +1,27 @@
+import mensajeros.*
+import destinos.*
+import transporte.*
+
+describe "puede ser entregado el paquete"{
+    test "test 1"{
+        paquete.pago(false)
+        assert.notThat (matrix.puedePasar(neo))
+    }
+    test "test2"{
+        paquete.pago(true)
+        assert.that (matrix.puedePasar(jeanGray))
+    }
+    test "test3"{
+        paquete.pago(true)
+        saraConnor.peso(70)
+        saraConnor.vehiculo(camion)
+        camion.acoplados(1)
+        assert.notThat(brooklynBridge.puedePasar(saraConnor))
+    }
+    test "test 4"{
+        paquete.pago(true)
+        saraConnor.peso(70)
+        saraConnor.vehiculo(moto)
+        assert.that(brooklynBridge.puedePasar(saraConnor))
+    }
+}
