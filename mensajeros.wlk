@@ -12,8 +12,8 @@ object jeanGray{
 object neo{
 	var puedeLlamar = true
 	const peso = 0
-	method tieneCredito(booleano){
-		puedeLlamar = booleano
+	method puedeLlamar(_puedeLlamar){
+		puedeLlamar = _puedeLlamar
 	}
 	method peso(){
 		return peso
@@ -25,27 +25,26 @@ object neo{
 object saraConnor{
 	var peso = 0
 	const puedeLlamar = false
-	var acoplados = 0
-	method setAcoplados(num){
-			acoplados =  num
+	var vehiculo = null
+	method peso(_peso){
+		peso = _peso
 	}
-	method setPeso(num){
-		peso = num
-	}
-	method acoplados(){
-		return acoplados
-	}
-	method transporte(vehiculo){
-		if (vehiculo != "moto" ){
-			peso = peso + 500 + 500 * acoplados
-		} else {
-			peso = peso + 100
-		}
+	method vehiculo(_vehiculo){
+		vehiculo = _vehiculo
 	}
 	method peso(){
-		return peso
+		return peso + vehiculo.peso()
 	}
 	method puedeLlamar(){
 		return puedeLlamar
 	}
+}
+object paquete{
+    var estaPago = false
+    method pago(_estaPago){
+        estaPago = _estaPago
+    }
+    method estaPago(){
+        return estaPago
+    }
 }

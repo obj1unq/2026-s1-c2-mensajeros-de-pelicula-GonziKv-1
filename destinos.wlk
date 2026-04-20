@@ -1,20 +1,12 @@
 //destinos
 import mensajeros.*
 object brooklynBridge{
-    var estaPago = false
-    method establecerPago(booleano){
-        estaPago = booleano
-    }
     method puedePasar(mensajero){
-        return mensajero.peso() < 1000 && estaPago
+        return mensajero.peso() < 1000 && paquete.estaPago()
     }
 }
 object matrix{
-    var estaPago = false
-    method establecerPago(booleano){
-        estaPago = booleano
-    }
     method puedePasar(mensajero){
-        return (mensajero.puedeLlamar()) && estaPago
+        return mensajero.puedeLlamar() && paquete.estaPago()
     }
 }
